@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public class SkPixmap {
     public var handle: OpaquePointer?

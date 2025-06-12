@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public enum SkGrBackend: UInt32 {
     case direct3D = 0

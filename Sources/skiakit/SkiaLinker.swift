@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public class SkLinker {
     public static func keepAlive() {

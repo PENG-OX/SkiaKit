@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public class SkColorSpace: SkRefCnt {
     public override init(handle: OpaquePointer?) {

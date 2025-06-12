@@ -8,31 +8,33 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .executableTarget(
-            name: "swift-skia-demo",
-            dependencies: ["SkiaKit"],
-            path: "Sources", // 指定源文件路径为 Sources
+        .systemLibrary(
+            name: "CSkia",
+            path: "Sources/CSkia/include",
+            pkgConfig: nil,
+            providers: nil
+        ),
+         .target(
+            name: "skiakit",
+            dependencies:["CSkia"],
+            path:"Sources/skiakit",
             linkerSettings: [
                 .linkedLibrary("SkiaSharp"),
-                .unsafeFlags(["-L", "Sources/lib"])
+                .unsafeFlags(["-L", "Sources/CSkia/lib"])
             ]
         ),
-        .target(
-            name: "SkiaKit",
-            dependencies: ["CSkia"],
-            path: "Sources/skiakit",
-            publicHeadersPath: ".",
-            cSettings: [
-                .headerSearchPath("../include/skia")
-            ]
+        .testTarget(
+            name: "swift-skia-test",
+            dependencies:["skiakit"],
+            path:"Sources",
+            sources:["Test.swift"]
         ),
-        .target(
-            name: "CSkia",
-            sources: ["skiakit/SkiaWindow.c"],
-            publicHeadersPath: "skiakit",
-            cSettings: [
-                .headerSearchPath("include/skia")
-            ]
+        .executableTarget(
+            name:"demo",
+            dependencies:["skiakit"],
+            path:"Sources",
+            sources:["main.swift"]
         )
+        
     ]
 )

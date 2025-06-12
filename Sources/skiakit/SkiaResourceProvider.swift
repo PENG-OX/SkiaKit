@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public class SkottieResourceProvider: SkRefCnt {
     public override init(handle: OpaquePointer?) {

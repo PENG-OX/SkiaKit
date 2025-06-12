@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 // MARK: - Basic Types
 

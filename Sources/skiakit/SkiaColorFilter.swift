@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public class SkColorFilter: SkRefCnt {
     public override init(handle: OpaquePointer?) {

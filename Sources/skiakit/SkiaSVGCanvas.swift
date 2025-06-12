@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public class SkSVGCanvas {
     public static func create(bounds: SkRect, stream: SkWStream) -> SkCanvas? {

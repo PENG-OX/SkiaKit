@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public class SkDocument: SkRefCnt {
     public override init(handle: OpaquePointer?) {

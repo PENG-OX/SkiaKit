@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public class SkStream {
     public var handle: OpaquePointer?

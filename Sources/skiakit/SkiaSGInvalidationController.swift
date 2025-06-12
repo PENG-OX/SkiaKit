@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public class SKSGInvalidationController {
     public var handle: OpaquePointer?

@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public class SkDrawable: SkRefCnt {
     public override init(handle: OpaquePointer?) {

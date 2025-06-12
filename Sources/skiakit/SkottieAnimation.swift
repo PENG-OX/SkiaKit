@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public class SkottieAnimation: SkRefCnt {
     public override init(handle: OpaquePointer?) {

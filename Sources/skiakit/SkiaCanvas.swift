@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public class SkCanvas {
     public var handle: OpaquePointer?

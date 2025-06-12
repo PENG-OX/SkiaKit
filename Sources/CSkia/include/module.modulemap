@@ -1,4 +1,4 @@
-module Skia {
+module CSkia {
     header "SkiaBridge.h"
     export *
 }

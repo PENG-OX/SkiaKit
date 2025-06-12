@@ -1,6 +1,5 @@
 import Foundation
-import Skia
-
+import CSkia
 public class SkBitmap {
     public var handle: OpaquePointer?
 
@@ -146,12 +145,3 @@ public class SkBitmap {
     }
 }
 
-public struct SkBitmapAllocFlags: OptionSet {
-    public let rawValue: UInt32
-
-    public init(rawValue: UInt32) {
-        self.rawValue = rawValue
-    }
-
-    public static let zeroPixels = SkBitmapAllocFlags(rawValue: ZERO_PIXELS_SK_BITMAP_ALLOC_FLAGS.rawValue)
-}

@@ -1,5 +1,5 @@
 import Foundation
-import Skia
+import CSkia
 
 public enum SkRRectType: UInt32 {
     case empty = 0
